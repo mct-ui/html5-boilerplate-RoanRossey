@@ -157,6 +157,11 @@ img {
 */
 
 html {
+  font-size: calc($root-font-size/16 * 100%);
+  font-family: $font-family-primary;
+  line-height: 1.5;
+  color: $color-text;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -164,6 +169,8 @@ html {
 */
 
 ::selection {
+  background-color: $color-primary;
+  color: white;
 }
 
 /*
@@ -173,17 +180,33 @@ html {
 */
 
 h1 {
+  font-size: $ms5;
+  font-weight: 700;
+
+  margin-bottom: $space-m;
+  line-height: calc($baseline*5);
 }
 
 h2 {
+  font-size: $ms3;
+  font-weight: 700;
+
+  margin-bottom: $space-m;
+  line-height: calc($baseline*4);
 }
 
 h3 {
+  font-size: $ms1;
+
+  margin-bottom: $space-m;
+  line-height: calc($baseline*3);
 }
 
 h4,
 h5,
 h6 {
+
+  margin-bottom: $space-m;
 }
 
 p,
@@ -193,35 +216,50 @@ dl,
 table,
 address,
 figure {
+
+  margin-bottom: $space-m;
 }
 
 ul,
 ol {
+
+  margin-bottom: $space-m;
 }
 
 li ul,
 li ol {
+  
 }
 
 blockquote {
+
+  margin-bottom: $space-m;
 }
 
 figcaption {
+
+  margin-bottom: $space-m;
 }
 
 hr {
+
+  margin-bottom: $space-m;
 }
 
 a {
-}
-
-a:hover {
+  color: $color-primary;
 }
 
 a:visited {
+  color: $color-primary;
+}
+
+a:hover {
+  color: hotpink;
 }
 
 a:active {
+    color: $color-primary-light;
 }
 
 /*---------------------------------------/*
