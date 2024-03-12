@@ -474,7 +474,8 @@ a:active {
       }
     }
   }
-}
+} 
+
 
 // Loop through the different breakpoints
 @each $breakpoint, $value in $breakpoints {
