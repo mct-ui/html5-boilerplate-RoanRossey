@@ -14,6 +14,8 @@
 // @include mq(#point, #query1, #query2);
 //
 
+//functie die iets gan outputten -> mixin
+
 @mixin mq($breakpoint, $query1: min, $query2: width) {
   $query: map-get($breakpoints, $breakpoint);
 
@@ -185,6 +187,16 @@ h1 {
 
   margin-bottom: $space-m;
   line-height: calc($baseline*5);
+
+  @include mq(bp1) {
+    font-size: $ms9;
+    line-height: calc($baseline*6);
+
+    @include mq (bp2) {
+      font-size: $ms11;
+      line-height: calc($baseline*8);
+    }
+  }
 }
 
 h2 {
@@ -273,7 +285,28 @@ a:active {
 */
 
 .o-row {
+  padding: $space-m $space-m 0;
+  display: flow-root;                 //margins worden niet genegeerd
+
+  &--primary {                        //maakt een 2e class aan met de 0-row + --primary
+    background-color: $color-primary;
+  }
 }
+
+.o-row--dark {
+  color: white;
+  background-color: $color-text;
+}
+
+.o-row--l {
+  @include mq(bp2){
+    padding: $space-xl $space-xl $space-m;
+  }
+}
+
+//  .o-row--primary {
+//     background-color: $color-primary;
+//  }
 
 /*
     Objects: Container
